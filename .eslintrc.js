@@ -11,15 +11,12 @@ module.exports = {
   ignorePatterns: ['.eslintrc.js'],
   rules: {
     'no-console': 'off',
-    'no-unused-vars': ['error', { vars: 'all', args: 'after-used', ignoreRestSiblings: false }],
-    'no-shadow': ['error', { builtinGlobals: false, hoist: 'functions', allow: [] }],
-    'no-restricted-syntax': [
-      'error',
-      {
-        selector:
-          "CallExpression[callee.object.name='console'][callee.property.name!=/^(log|warn|error|info|trace)$/]",
-        message: 'Unexpected property on console object was called',
-      },
-    ],
+    'no-unused-vars': 'off',
+    'no-shadow': 'off',
+    'no-restricted-syntax': 'off',
+    'import/extensions': 'off',
+    'no-undef': 'off',
+    'import/prefer-default-export': 'off',
+    'import/no-unresolved': 'off',
   },
 };
