@@ -18,5 +18,7 @@ module.exports = {
     'no-undef': 'off',
     'import/prefer-default-export': 'off',
     'import/no-unresolved': 'off',
+    'arrow-parens': 'off',
+    'implicit-arrow-linebreak': 'off',
   },
 };
