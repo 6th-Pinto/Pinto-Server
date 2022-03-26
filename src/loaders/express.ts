@@ -4,10 +4,7 @@ import express, { Application } from 'express';
 import morgan from 'morgan';
 
 import routes from '../api';
-import errorHandler from '../api/middlewares/error';
 import config from '../config';
-import { commonError } from '../constants/error';
-import ErrorResponse from '../utils/error-response';
 
 export default (app: Application): void => {
   app.use(express.json());
