@@ -6,11 +6,7 @@ import JwtHelper from '../../helpers/jwt';
 import ErrorResponse from '../../utils/error-response';
 import { getAccessToken, getRefreshToken } from '../../utils/jwt';
 
-const validateToken = async (
-  req: Request,
-  res: Response,
-  next: NextFunction,
-): Promise<void> => {
+const validateToken = async (req: Request, res: Response, next: NextFunction): Promise<void> => {
   try {
     const accessToken = getAccessToken(req.headers.authorization);
     const refreshToken = getRefreshToken(req.cookies);
