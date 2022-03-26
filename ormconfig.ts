@@ -1,5 +1,4 @@
-const SnakeNamingStrategy =
-  require('typeorm-naming-strategies').SnakeNamingStrategy;
+const SnakeNamingStrategy = require('typeorm-naming-strategies').SnakeNamingStrategy;
 
 const ext = process.env.NODE_ENV === 'development' ? 'ts' : 'js';
 
