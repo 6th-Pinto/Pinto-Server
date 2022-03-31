@@ -9,7 +9,7 @@ class ErrorResponse extends Error {
 
   statusCode: number;
 
-  timeStamp: string = new Date().toISOString();
+  timeStamp: string;
 
   stacks?: string;
 
