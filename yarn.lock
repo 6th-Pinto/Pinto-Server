@@ -826,11 +826,6 @@
   dependencies:
     defer-to-connect "^1.0.1"
 
-"@teipro/validation@^1.1.0":
-  version "1.1.0"
-  resolved "https://registry.npmjs.org/@teipro/validation/-/validation-1.1.0.tgz"
-  integrity sha512-ddYIRxEsSY0msSGtwN56iIRwz/so1fUVri2lnDBoiPyAiqN5OhPxAKb+vN+c0fyoaP+0whBUKCErOxqBMGwe2w==
-
 "@tootallnate/once@1":
   version "1.1.2"
   resolved "https://registry.npmjs.org/@tootallnate/once/-/once-1.1.2.tgz"
@@ -2126,7 +2121,7 @@ basic-auth@~2.0.1:
 
 bcrypt@^5.0.1:
   version "5.0.1"
-  resolved "https://registry.npmjs.org/bcrypt/-/bcrypt-5.0.1.tgz"
+  resolved "https://registry.yarnpkg.com/bcrypt/-/bcrypt-5.0.1.tgz#f1a2c20f208e2ccdceea4433df0c8b2c54ecdf71"
   integrity sha512-9BTgmrhZM2t1bNuDtrtIMVSmmxZBrJ71n8Wg+YgdjHuIWYF7SjjmCPZFB+/5i/o/PIeRpwVJR3P+NrpIItUjqw==
   dependencies:
     "@mapbox/node-pre-gyp" "^1.0.0"
