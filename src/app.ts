@@ -1,4 +1,6 @@
 import express, { Application } from 'express';
+import { Server } from 'socket.io';
+import http from 'http';
 
 import config from './config';
 import loadApp from './loaders';
@@ -7,7 +9,12 @@ const startServer = async () => {
   const app: Application = express();
 
   await loadApp(app);
-  app.listen(config.port);
+  const httpServer = http.createServer(app);
+  const ioServer = new Server(httpServer);
+  ioServer.on('connection', socket => {
+    console.log('socket server is running');
+  });
+  httpServer.listen(config.port);
 };
 
 startServer()
