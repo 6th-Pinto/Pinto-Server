@@ -1,8 +1,3 @@
 {
-    "presets": [
-        "babel-preset-env",
-        "transform-dirname-filename",
-        "babel-node",
-        "babel-cli"    
-    ]
+  "presets": ["babel-preset-env", "transform-dirname-filename", "babel-node", "babel-cli"]
 }

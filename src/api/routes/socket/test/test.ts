@@ -16,7 +16,7 @@ async function getCameras() {
   try {
     const devices = await navigator.mediaDevices.enumerateDevices();
     const cameras = devices.filter(device => device.kind === 'videoinput');
-    
+
     const currentCamera = myStream.getVideoTracks()[0];
     cameras.forEach(camera => {
       const option = document.createElement('option');

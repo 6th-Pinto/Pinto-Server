@@ -1,6 +1,6 @@
 {
   "compilerOptions": {
-    "lib": ["es6", "es5","DOM"],
+    "lib": ["es6", "es5", "DOM"],
     "target": "es6",
     "module": "commonjs",
     "moduleResolution": "node",
@@ -15,6 +15,6 @@
     "forceConsistentCasingInFileNames": true,
     "strictPropertyInitialization": false
   },
-  "include": ["src/**/*.ts"],
+  "include": ["src/**/*.ts", "src/public/test.js"],
   "exclude": ["node_modules"]
 }

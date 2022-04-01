@@ -17,7 +17,6 @@
   },
   "dependencies": {
     "@babel/preset-typescript": "^7.16.7",
-    "@teipro/validation": "^1.1.0",
     "babel": "^6.23.0",
     "babel-cli": "^6.26.0",
     "babel-core": "^6.26.3",
@@ -25,7 +24,6 @@
     "babel-plugin-transform-dirname-filename": "^1.1.0",
     "babel-preset-env": "^1.7.0",
     "bcrypt": "^5.0.1",
-    "cloudinary": "^1.27.1",
     "cookie-parser": "^1.4.6",
     "cors": "^2.8.5",
     "express": "^4.17.1",
