@@ -15,15 +15,22 @@ class UserService {
     this.userRepository = userRepository;
   }
 
-  async getUser(
-    uid: string,
-  ): Promise<{ userId: string; email: string; major: string; school: string } & UpdateInfo> {
+  async getUser(uid: string): Promise<
+    {
+      userId: string;
+      email: string;
+      birthDate: Date;
+      phoneNumber: string;
+      major: string;
+      school: string;
+    } & UpdateInfo
+  > {
     const user = await this.userRepository.findByUid(uid);
     if (!user) {
       throw new ErrorResponse(commonError.unauthorized);
     }
-    const { userId, email, school, major, createdAt, updatedAt } = user;
-    return { userId, email, school, major, createdAt, updatedAt };
+    const { userId, email, school, birthDate, phoneNumber, major, createdAt, updatedAt } = user;
+    return { userId, email, school, birthDate, phoneNumber, major, createdAt, updatedAt };
   }
 
   async createUser(userInfo: UserInfo): Promise<{ uid: string } & UpdateInfo> {
