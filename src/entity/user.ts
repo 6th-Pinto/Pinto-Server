@@ -14,16 +14,22 @@ class UserEntity {
   @Column('varchar', { length: 30, unique: true })
   userId: string;
 
-  @Column('text')
+  @Column('varchar')
   password: string;
 
+  @Column('datetime')
+  birthDate: Date;
+
   @Column('text')
+  phoneNumber: string;
+
+  @Column('varchar')
   email: string;
 
-  @Column('text')
+  @Column('varchar')
   school: string;
 
-  @Column('text')
+  @Column('varchar')
   major: string;
 
   @CreateDateColumn({ type: 'timestamp' })
