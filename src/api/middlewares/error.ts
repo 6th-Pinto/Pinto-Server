@@ -8,7 +8,6 @@ const createErrorInfoDevelopment = (err: ErrorResponse) => {
     success: false,
     statusCode: err?.statusCode || 500,
     message: err.message,
-    timeStamp: new Date().toISOString(),
     stack: err.stacks || err.stack,
   };
 };
@@ -18,7 +17,6 @@ const createErrorInfoProduction = (err: ErrorResponse) => {
     success: false,
     statusCode: err?.statusCode || commonError.wrong.statusCode,
     message: err.isOperational ? err.message : commonError.wrong.message,
-    timeStamp: new Date().toISOString(),
   };
 };
 

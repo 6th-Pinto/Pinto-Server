@@ -1,7 +1,6 @@
 interface ErrorResponseProps {
   statusCode: number;
   message: string;
-  timeStamp: string;
 }
 
 class ErrorResponse extends Error {
@@ -9,14 +8,11 @@ class ErrorResponse extends Error {
 
   statusCode: number;
 
-  timeStamp: string;
-
   stacks?: string;
 
-  constructor({ message, statusCode, timeStamp }: ErrorResponseProps) {
+  constructor({ message, statusCode }: ErrorResponseProps) {
     super(message);
     this.statusCode = statusCode;
-    this.timeStamp = timeStamp;
     this.isOperational = true;
 
     Error.captureStackTrace(this, this.constructor);
