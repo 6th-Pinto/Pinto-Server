@@ -34,8 +34,8 @@ class JwtHelper {
   constructor({ algorithm, secret, accessExpiresInHour, refreshExpiresInHour }: JwtOptions) {
     this.algorithm = algorithm;
     this.secret = secret;
-    this.accessExpiresInSeconds = accessExpiresInHour * 60 * 60;
-    this.refreshExpiresInSeconds = refreshExpiresInHour * 60 * 60 * 60;
+    this.accessExpiresInSeconds = accessExpiresInHour * 3600;
+    this.refreshExpiresInSeconds = refreshExpiresInHour * 360000;
   }
 
   generateAccessToken({ uid, userId }: OwnAccessJwtPayload): string {
@@ -58,10 +58,7 @@ class JwtHelper {
     return jwt.sign({ uid }, this.secret, jwtOptions);
   }
 
-  generateJwtTokens(payload: OwnJwtPayload): {
-    access: string;
-    refresh: string;
-  } {
+  generateJwtTokens(payload: OwnJwtPayload): { access: string; refresh: string } {
     const access = this.generateAccessToken(payload);
     const refresh = this.generateRefreshToken(payload);
 
