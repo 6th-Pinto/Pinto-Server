@@ -1,8 +1,12 @@
 import { Router } from 'express';
-import { AuthTest } from './auth.controller';
+
+import { loginValidation, refreshValidation } from '../../validation/auth';
+import { handleLogin, handleLogout, handleRefresh } from './auth.controller';
 
 const router = Router();
 
-router.get('/', AuthTest);
+router.post('/', loginValidation, handleLogin);
+router.get('/', refreshValidation, handleRefresh);
+router.delete('/', handleLogout);
 
 export default router;
