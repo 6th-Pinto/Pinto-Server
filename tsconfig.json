@@ -20,11 +20,6 @@
     "src/public/test.js",
     "src/entity/user.ts",
     "src/loaders/entity-injector.ts",
-    "src/app.js",
-    "src/loaders/index.js",
-    "src/app.js",
-    "src/app.js",
-    "src/loaders/index.js"
   ],
   "exclude": ["node_modules"]
 }
