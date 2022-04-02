@@ -8,6 +8,8 @@ export interface UpdateInfo {
 export interface UserLoginInfo {
   userId: string;
   password: string;
+  birthDate: Date;
+  phoneNumber: string;
   email: string;
   major: string;
   school: string;
