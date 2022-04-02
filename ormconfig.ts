@@ -12,6 +12,8 @@ module.exports = {
   synchronize: true,
   logging: false,
   entities: [`src/entity/**/*.${ext}`],
+  migrations: [`src/migration/**/*.${ext}`],
+  subscribers: [`src/subscriber/**/*.${ext}`],
   cli: {
     entitiesDir: 'src/entity',
     migrationsDir: 'src/migration',
