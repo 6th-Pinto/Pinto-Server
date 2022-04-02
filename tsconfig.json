@@ -15,6 +15,6 @@
     "forceConsistentCasingInFileNames": true,
     "strictPropertyInitialization": false
   },
-  "include": ["src/**/*.ts", "src/public/test.js"],
+  "include": ["src/**/*.ts", "src/public/test.js", "src/entity/user.js"],
   "exclude": ["node_modules"]
 }
