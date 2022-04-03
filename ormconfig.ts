@@ -1,6 +1,6 @@
 const SnakeNamingStrategy = require('typeorm-naming-strategies').SnakeNamingStrategy;
 
-const ext = process.env.NODE_ENV === 'development' ? 'ts' : 'js';
+const ext = process.env.NODE_ENV === 'development' ? 'js' : 'ts';
 
 module.exports = {
   type: 'mysql',
@@ -9,7 +9,7 @@ module.exports = {
   username: process.env.DB_USER,
   password: process.env.DB_PASSWORD,
   database: process.env.DB_NAME,
-  synchronize: true,
+  synchronize: process.env.NODE_ENV === 'production' ? false : true,
   logging: false,
   entities: [`src/entity/**/*.${ext}`],
   migrations: [`src/migration/**/*.${ext}`],
