@@ -4,7 +4,7 @@
   "main": "src/app.ts",
   "license": "MIT",
   "scripts": {
-    "dev": "node dist/app.js",
+    "dev": "NODE_ENV=production node dist/app.js",
     "start": "env-cmd -f .env.dev nodemon --exec ts-node src/app.ts",
     "build": "tsc",
     "lint": "eslint ./src --ext .ts",
