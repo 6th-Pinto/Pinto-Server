@@ -6,7 +6,8 @@ export default {
     prefix: '/api',
   },
   corsOptions: {
-    origin: process.env.ORIGIN,
+    method: ['GET', 'HEAD', 'PATCH', 'POST', 'DELETE'],
+    origin: '*',
     credentials: true,
     optionsSuccessStatus: 200,
   },
