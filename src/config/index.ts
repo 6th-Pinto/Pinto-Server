@@ -1,12 +1,13 @@
 process.env.NODE_ENV = process.env.NODE_ENV || 'development';
 
 export default {
-  port: parseInt(process.env.PORT || '5000', 10),
+  port: 5000,
   api: {
     prefix: '/api',
   },
   corsOptions: {
-    origin: process.env.ORIGIN,
+    method: ['GET', 'HEAD', 'PATCH', 'POST', 'DELETE'],
+    origin: '*',
     credentials: true,
     optionsSuccessStatus: 200,
   },

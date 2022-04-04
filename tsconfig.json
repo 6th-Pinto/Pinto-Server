@@ -15,6 +15,11 @@
     "forceConsistentCasingInFileNames": true,
     "strictPropertyInitialization": false
   },
-  "include": ["src/**/*.ts", "src/public/test.js"],
+  "include": [
+    "src/**/*.ts",
+    "src/public/test.js",
+    "src/entity/user.ts",
+    "src/loaders/entity-injector.ts",
+  ],
   "exclude": ["node_modules"]
 }

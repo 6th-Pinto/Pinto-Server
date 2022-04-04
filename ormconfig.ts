@@ -9,9 +9,11 @@ module.exports = {
   username: process.env.DB_USER,
   password: process.env.DB_PASSWORD,
   database: process.env.DB_NAME,
-  synchronize: true,
+  synchronize: process.env.NODE_ENV === 'production' ? false : true,
   logging: false,
   entities: [`src/entity/**/*.${ext}`],
+  migrations: [`src/migration/**/*.${ext}`],
+  subscribers: [`src/subscriber/**/*.${ext}`],
   cli: {
     entitiesDir: 'src/entity',
     migrationsDir: 'src/migration',
