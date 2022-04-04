@@ -13,6 +13,19 @@ const startServer = async () => {
   const ioServer = new Server(httpServer);
   ioServer.on('connection', socket => {
     console.log('socket server is running');
+    socket.on('join_room', roomName => {
+      socket.join(roomName);
+      socket.to(roomName).emit('welcome');
+    });
+    socket.on('offer', (offer, roomName) => {
+      socket.to(roomName).emit('offer', offer);
+    });
+    socket.on('answer', (answer, roomName) => {
+      socket.to(roomName).emit('answer', answer);
+    });
+    socket.on('ice', (ice, roomName) => {
+      socket.to(roomName).emit('ice', ice);
+    });
   });
   httpServer.listen(config.port);
 };

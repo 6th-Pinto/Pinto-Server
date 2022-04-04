@@ -1,3 +1,4 @@
+import { Int } from 'io-ts';
 import {
   Column,
   CreateDateColumn,
