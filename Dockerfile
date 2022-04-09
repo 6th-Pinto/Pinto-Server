@@ -1,13 +1,13 @@
-FROM node:17-alpine3.14
-WORKDIR /app
+FROM node:alpine 
 
-COPY . .
+WORKDIR /app 
 
-RUN npm install 
-RUN npx tsc
+COPY ./package.json ./ 
 
-ENV NODE_ENV production
+RUN yarn 
 
-EXPOSE 5000
+RUN yarn build
 
-CMD ["node", "./dist/app.js"]
+COPY . . 
+
+CMD [ "yarn", "dev" ]
