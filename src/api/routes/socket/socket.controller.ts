@@ -4,18 +4,19 @@ import {
     sameSchooleDiffMajorWaitingLine,
     diffSchooleWaitingLine
 } from "../waiting/waiting.controller"
-
+/*
 export const sameSchooleSameMajor = async (
   req: Request,
-  res: Response
-): Promise<void> => {
-    try {
+    res: Response
+/*
+//): Promise<void> => {
+ //   try {
       
-    } catch (e) {
-        console.log(e)
-  }
-}
-
+//    } catch (e) {
+//        console.log(e)
+//  }
+//}
+/*
 export const sameSchooleDiffMajor = async(
     req: Request,
     res: Response
@@ -42,3 +43,6 @@ export const diffSchoole = (
     console.log(e)
     }
 }
+
+*/
+

@@ -1,7 +1,7 @@
 export const sameSchooelSameMajorWaitingLine = [];
 export const sameSchooleDiffMajorWaitingLine = [];
 export const diffSchooleWaitingLine = [];
-
+/*
 
 export const making2Room =  (req: Request, res: Response) => {
     try {
@@ -36,3 +36,4 @@ export const makingRoomName = (req: Request, res: Response) => {
     return createRoomName;
     
 }
+*/
