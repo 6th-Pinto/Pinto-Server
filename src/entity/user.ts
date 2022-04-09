@@ -18,6 +18,9 @@ class UserEntity {
   @Column('varchar')
   password: string;
 
+  @Column('varchar')
+  name: string;
+
   @Column('datetime')
   birthDate: Date;
 

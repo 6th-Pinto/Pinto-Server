@@ -6,7 +6,7 @@ export default {
     prefix: '/api',
   },
   corsOptions: {
-    method: ['GET', 'HEAD', 'PATCH', 'POST', 'DELETE'],
+    method: ['GET', 'HEAD', 'PATCH', 'PUT', 'POST', 'DELETE'],
     origin: '*',
     credentials: true,
     optionsSuccessStatus: 200,
