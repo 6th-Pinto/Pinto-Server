@@ -19,6 +19,7 @@ class UserService {
     {
       userId: string;
       email: string;
+      name: string;
       birthDate: Date;
       phoneNumber: string;
       major: string;
@@ -29,8 +30,9 @@ class UserService {
     if (!user) {
       throw new ErrorResponse(commonError.unauthorized);
     }
-    const { userId, email, school, birthDate, phoneNumber, major, createdAt, updatedAt } = user;
-    return { userId, email, school, birthDate, phoneNumber, major, createdAt, updatedAt };
+    const { userId, email, name, school, birthDate, phoneNumber, major, createdAt, updatedAt } =
+      user;
+    return { userId, email, name, school, birthDate, phoneNumber, major, createdAt, updatedAt };
   }
 
   async createUser(userInfo: UserInfo): Promise<{ uid: string } & UpdateInfo> {
