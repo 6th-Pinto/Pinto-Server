@@ -26,6 +26,12 @@ const startServer = async () => {
     socket.on('ice', (ice, roomName) => {
       socket.to(roomName).emit('ice', ice);
     });
+    socket.on('disconnect', roomName => {
+      socket.leave(roomName);
+      socket.to(roomName).emit(`user ${socket.id} has left room`)
+
+    })
+    
   });
   httpServer.listen(config.port);
 };

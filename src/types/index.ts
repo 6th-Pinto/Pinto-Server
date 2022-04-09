@@ -15,6 +15,8 @@ export interface UserLoginInfo {
   school: string;
 }
 
+
+
 export type UserInfo = UserLoginInfo;
 
 export interface RefreshCookie {
