@@ -28,10 +28,8 @@ const startServer = async () => {
     });
     socket.on('disconnect', roomName => {
       socket.leave(roomName);
-      socket.to(roomName).emit(`user ${socket.id} has left room`)
-
-    })
-    
+      socket.to(roomName).emit(`user ${socket.id} has left room`);
+    });
   });
   httpServer.listen(config.port);
 };
