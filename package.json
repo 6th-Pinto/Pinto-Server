@@ -10,6 +10,7 @@
     "dev": "NODE_ENV=production node dist/app.js",
     "start": "env-cmd -f .env.dev nodemon --exec ts-node src/app.ts",
     "build": "tsc",
+    "heroku-postbuild": "yarn build /../views/home.pug",
     "lint": "eslint ./src --ext .ts",
     "lint:fix": "eslint ./src --ext .ts --fix",
     "prettier:write": "yarn prettier --write .",
