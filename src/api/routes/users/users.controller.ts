@@ -3,7 +3,7 @@ import { Container } from 'typedi';
 
 import UserService from '../../../services/user';
 import { CreateUserRequestBody } from '../../../types';
-/*
+
 export const handleUserTest = async (
   req: Request,
   res: Response,
@@ -20,7 +20,7 @@ export const handleUserTest = async (
     next(e);
   }
 };
-*/
+
 export const handleCreateUser = async (
   req: Request,
   res: Response,
