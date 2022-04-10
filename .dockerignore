@@ -2,5 +2,4 @@
 README.md
 LICENSE
 yarn.lock
-mode_modules
-package-lock.json
+node_modules

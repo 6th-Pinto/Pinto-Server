@@ -1,9 +1,6 @@
 {
   "name": "pinto-server",
   "version": "1.0.0",
-  "engines": {
-    "node": "16.14.1"
-  },
   "main": "src/app.ts",
   "license": "MIT",
   "scripts": {
