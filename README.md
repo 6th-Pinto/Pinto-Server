@@ -1,1 +1,1 @@
-# Pinto - Server
+# Pinto-Server
