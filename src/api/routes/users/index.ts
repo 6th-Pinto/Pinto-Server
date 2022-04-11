@@ -6,6 +6,6 @@ import { handleCreateUser, handleUserTest } from './users.controller';
 const router = Router();
 
 router.get('/', userTestValidation, handleUserTest);
-router.post('/', userCreateValidation) // handleCreateUser);
+router.post('/', userCreateValidation, handleCreateUser);
 
 export default router;
