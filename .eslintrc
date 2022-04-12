@@ -22,6 +22,7 @@
     "prettier/prettier": "off",
     "no-plusplus": "off",
     "no-empty": "off",
+    "consistent-return": "off",
     "@typescript-eslint/no-explicit-any": "off",
     "@typescript-eslint/no-unused-vars": "off",
     "@typescript-eslint/explicit-module-boundary-types": "off",
@@ -37,7 +38,8 @@
     "@typescript-eslint/no-floating-promises": "off",
     "@typescript-eslint/no-shadow": "off",
     "@typescript-eslint/no-use-before-define": "off",
-    "@typescript-eslint/no-unsafe-return": "off"
+    "@typescript-eslint/no-unsafe-return": "off",
+    "@typescript-eslint/no-misused-promises": "off"
   },
   "ignorePatterns": ["node_modules/", "build", "**/*.js", "ormconfig.ts", "tests/"]
 }
