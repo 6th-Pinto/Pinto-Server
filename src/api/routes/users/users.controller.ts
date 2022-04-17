@@ -11,10 +11,8 @@ export const handleUserTest = async (
 ): Promise<void> => {
   try {
     const { uid } = req.query;
-
     const userServiceInstance = Container.get(UserService);
     const user = await userServiceInstance.getUser(uid?.toString() ?? '');
-
     res.json(user);
   } catch (e) {
     next(e);

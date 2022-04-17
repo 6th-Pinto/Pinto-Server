@@ -23,6 +23,8 @@ class AuthService {
 
   async login({ userId, password }: UserLoginInfo): Promise<{ access: string; refresh: string }> {
     const user = await this.userRepository.findByUserId(userId);
+    const openName = await this.userRepository.findNameByUserID(userId);
+    // const openMajor = await this.userRepository.findMajorByUserID(userId);
     if (!user) {
       throw new ErrorResponse(commonError.unauthorized);
     }
@@ -31,9 +33,29 @@ class AuthService {
     if (!isValid) {
       throw new ErrorResponse(commonError.unauthorized);
     }
-
     const tokens = this.jwtHelper.generateJwtTokens(user);
+    console.log(openName);
+    // console.log(openMajor)
     return tokens;
+  }
+
+  
+  async openInfoName({ userId, password }: UserLoginInfo): Promise<{ userOpenName: any;  }> {
+    const openName: any = await this.userRepository.findNameByUserID(userId);
+    console.log(openName);
+    return openName
+  }
+  
+  
+  async openInfoSchool({ userId, password }: UserLoginInfo): Promise<{ userOpenSchool: any;  }> {
+    const openschool: any = await this.userRepository.findSchoolByUserID(userId);
+    return openschool
+  }
+
+  async openInfoMajor({ userId, password }: UserLoginInfo): Promise<{ userOpenMajor: any;  }> {
+    const openMajor: any = await this.userRepository.findMajorByUserID(userId);
+
+    return openMajor
   }
 
   async refreshAccessToken(refreshToken: string): Promise<{ access: string }> {
