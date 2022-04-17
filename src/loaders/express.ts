@@ -22,8 +22,8 @@ export default (app: Application): void => {
   app.use(morgan(process.env.NODE_ENV === 'development' ? 'dev' : 'combined'));
 
   app.use(config.api.prefix, routes);
-  // app.all('*', (_req, _res, next) => {
-  //  next(new ErrorResponse(commonError.notFound));
-  // });
+  app.all('*', (_req, _res, next) => {
+    next(new ErrorResponse(commonError.notFound));
+  });
   app.use(errorHandler);
 };
