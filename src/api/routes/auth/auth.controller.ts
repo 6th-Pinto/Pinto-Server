@@ -22,15 +22,17 @@ export const handleLogin = async (
 
     const { access, refresh } = await authServiceInstance.login(userLoginInfo);
     const  name  = await authServiceInstance.openInfoName(userLoginInfo);
+    const  school  = await authServiceInstance.openInfoSchool(userLoginInfo);
+    const  major  = await authServiceInstance.openInfoMajor(userLoginInfo);
     const refreshTokenExpires = new Date(Date.now() + jwtHelper.getRefreshExpiresInMs());
     const refreshTokenCookieOptions: CookieOptions = {
       expires: refreshTokenExpires,
       secure: false,
       httpOnly: true,
     };
-    console.log(name)
     res.cookie(REFRESH_TOKEN_COOKIE_KEY, refresh, refreshTokenCookieOptions);
-    res.status(200).json({ access, name });
+    res.status(200).json({ access, name, school, major });
+    
   } catch (e) {
     next(e);
   }

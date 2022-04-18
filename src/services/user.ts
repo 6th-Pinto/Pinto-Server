@@ -15,6 +15,7 @@ class UserService {
     this.userRepository = userRepository;
   }
 
+  
   async getUser(uid: string): Promise<
     {
       userId: string;
